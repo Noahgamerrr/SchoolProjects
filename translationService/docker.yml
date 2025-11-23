@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.4.3
+    container_name: translation_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-super-secret-password
+      MYSQL_DATABASE: translationmanagement
+      MYSQL_USER: translation_user
+      MYSQL_PASSWORD: my-secret-password
+    command: --mysql-native-password=ON
+    ports:
+      - 3306:3306
+    volumes:
+      - my-db:/var/lib/mysql
+ 
+  adminer:
+    image: adminer
+    container_name: translation-adminer
+    restart: always
+    ports:
+      - 9000:8080
+
+volumes:
+  my-db:
+ 
