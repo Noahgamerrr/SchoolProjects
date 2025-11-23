@@ -1,0 +1,567 @@
+[
+    {
+      "openDayId": "65e85c74062477ce17e89c21",
+      "firstname": "Jaiden",
+      "lastname": "Schuster",
+      "shortform": "Jaiden",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c22",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c23",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c24",
+          "isLeader": "true"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c25",
+          "isLeader": "true"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c26",
+          "isLeader": "false"
+        }
+      ],
+      "activity": [
+        {
+          "time": "1972-04-27T12:40:45.419Z",
+          "activity": "break"
+        },
+        {
+          "time": "1992-03-14T06:05:17.932Z",
+          "activity": "break"
+        },
+        {
+          "time": "2015-02-19T18:07:25.163Z",
+          "activity": "available"
+        },
+        {
+          "time": "2020-11-24T10:26:24.791Z",
+          "activity": "available"
+        },
+        {
+          "time": "1975-07-28T09:51:58.347Z",
+          "activity": "tour"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c27",
+      "firstname": "Ciara",
+      "lastname": "Hegmann-Herzog",
+      "shortform": "Ciara",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c28",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c29",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c2a",
+          "isLeader": "false"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c2b",
+          "isLeader": "true"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c2c",
+          "isLeader": "true"
+        }
+      ],
+      "activity": [
+        {
+          "time": "1976-12-02T18:55:47.127Z",
+          "activity": "available"
+        },
+        {
+          "time": "1972-08-14T13:26:20.540Z",
+          "activity": "available"
+        },
+        {
+          "time": "1992-09-14T07:14:53.792Z",
+          "activity": "available"
+        },
+        {
+          "time": "2018-09-26T13:29:12.568Z",
+          "activity": "home"
+        },
+        {
+          "time": "2001-05-17T03:45:51.798Z",
+          "activity": "break"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c2d",
+      "firstname": "Keven",
+      "lastname": "O'Conner",
+      "shortform": "Keven",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c2e",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c2f",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c30",
+          "isLeader": "false"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c31",
+          "isLeader": "false"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c32",
+          "isLeader": "false"
+        }
+      ],
+      "activity": [
+        {
+          "time": "1995-01-22T18:59:06.221Z",
+          "activity": "available"
+        },
+        {
+          "time": "1994-11-04T20:04:19.544Z",
+          "activity": "home"
+        },
+        {
+          "time": "2006-06-06T14:02:17.512Z",
+          "activity": "break"
+        },
+        {
+          "time": "1991-12-04T10:02:28.519Z",
+          "activity": "break"
+        },
+        {
+          "time": "2001-07-27T04:51:26.904Z",
+          "activity": "home"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c33",
+      "firstname": "Lupe",
+      "lastname": "McClure",
+      "shortform": "Lupe",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c34",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c35",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c36",
+          "isLeader": "true"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c37",
+          "isLeader": "false"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c38",
+          "isLeader": "true"
+        }
+      ],
+      "activity": [
+        {
+          "time": "1975-11-20T11:15:32.418Z",
+          "activity": "break"
+        },
+        {
+          "time": "1984-05-17T03:59:32.905Z",
+          "activity": "available"
+        },
+        {
+          "time": "2009-11-22T01:48:07.386Z",
+          "activity": "home"
+        },
+        {
+          "time": "2012-11-26T23:24:35.281Z",
+          "activity": "home"
+        },
+        {
+          "time": "1989-01-07T09:57:13.193Z",
+          "activity": "break"
+        },
+        {
+          "time": "2010-05-20T15:22:07.267Z",
+          "activity": "available"
+        },
+        {
+          "time": "1980-06-29T13:48:54.727Z",
+          "activity": "available"
+        },
+        {
+          "time": "2012-09-20T02:23:40.233Z",
+          "activity": "available"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c39",
+      "firstname": "Cedrick",
+      "lastname": "Jakubowski",
+      "shortform": "Cedrick",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c3a",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c3b",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c3c",
+          "isLeader": "true"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c3d",
+          "isLeader": "false"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c3e",
+          "isLeader": "true"
+        }
+      ],
+      "activity": [
+        {
+          "time": "2023-09-02T02:59:31.128Z",
+          "activity": "home"
+        },
+        {
+          "time": "2013-03-17T00:20:38.395Z",
+          "activity": "break"
+        },
+        {
+          "time": "1977-10-17T21:20:21.259Z",
+          "activity": "tour"
+        },
+        {
+          "time": "2020-07-10T15:53:19.855Z",
+          "activity": "tour"
+        },
+        {
+          "time": "2012-10-11T08:39:57.089Z",
+          "activity": "home"
+        },
+        {
+          "time": "2016-01-29T10:03:45.779Z",
+          "activity": "available"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c3f",
+      "firstname": "Ava",
+      "lastname": "Hahn",
+      "shortform": "Ava",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c40",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c41",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c42",
+          "isLeader": "true"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c43",
+          "isLeader": "true"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c44",
+          "isLeader": "true"
+        }
+      ],
+      "activity": [
+        {
+          "time": "2020-09-01T23:38:52.496Z",
+          "activity": "tour"
+        },
+        {
+          "time": "1972-10-21T08:57:39.397Z",
+          "activity": "home"
+        },
+        {
+          "time": "2023-09-27T20:35:15.083Z",
+          "activity": "home"
+        },
+        {
+          "time": "1985-07-20T11:42:27.358Z",
+          "activity": "tour"
+        },
+        {
+          "time": "1999-12-24T23:38:00.667Z",
+          "activity": "home"
+        },
+        {
+          "time": "1970-12-28T17:42:23.072Z",
+          "activity": "tour"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c45",
+      "firstname": "Lamont",
+      "lastname": "Doyle",
+      "shortform": "Lamont",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c46",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c47",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c48",
+          "isLeader": "true"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c49",
+          "isLeader": "true"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c4a",
+          "isLeader": "false"
+        }
+      ],
+      "activity": [
+        {
+          "time": "1992-02-06T17:01:19.409Z",
+          "activity": "break"
+        },
+        {
+          "time": "1989-02-20T18:17:44.696Z",
+          "activity": "tour"
+        },
+        {
+          "time": "1985-07-28T05:07:04.268Z",
+          "activity": "break"
+        },
+        {
+          "time": "2018-01-04T15:02:01.669Z",
+          "activity": "break"
+        },
+        {
+          "time": "1985-04-20T22:34:41.441Z",
+          "activity": "tour"
+        },
+        {
+          "time": "2007-07-04T04:57:57.471Z",
+          "activity": "available"
+        },
+        {
+          "time": "1971-05-17T06:40:44.641Z",
+          "activity": "available"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c4b",
+      "firstname": "Georgianna",
+      "lastname": "Zulauf",
+      "shortform": "Georgianna",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c4c",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c4d",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c4e",
+          "isLeader": "false"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c4f",
+          "isLeader": "false"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c50",
+          "isLeader": "false"
+        }
+      ],
+      "activity": [
+        {
+          "time": "2005-04-30T11:34:44.660Z",
+          "activity": "home"
+        },
+        {
+          "time": "2020-05-07T21:47:50.439Z",
+          "activity": "available"
+        },
+        {
+          "time": "2004-11-21T12:09:09.213Z",
+          "activity": "break"
+        },
+        {
+          "time": "1985-12-14T19:00:50.868Z",
+          "activity": "break"
+        },
+        {
+          "time": "1998-03-05T21:41:32.852Z",
+          "activity": "tour"
+        },
+        {
+          "time": "2013-03-28T00:18:49.655Z",
+          "activity": "available"
+        },
+        {
+          "time": "2013-07-21T14:00:43.323Z",
+          "activity": "available"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c51",
+      "firstname": "Cletus",
+      "lastname": "McDermott",
+      "shortform": "Cletus",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c52",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c53",
+          "isLeader": "false"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c54",
+          "isLeader": "false"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c55",
+          "isLeader": "false"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c56",
+          "isLeader": "true"
+        }
+      ],
+      "activity": [
+        {
+          "time": "1991-08-26T14:39:26.705Z",
+          "activity": "tour"
+        },
+        {
+          "time": "1997-04-05T10:37:32.572Z",
+          "activity": "break"
+        },
+        {
+          "time": "1981-07-30T04:47:31.751Z",
+          "activity": "available"
+        },
+        {
+          "time": "1993-03-17T11:34:20.919Z",
+          "activity": "break"
+        },
+        {
+          "time": "1999-05-25T05:58:28.963Z",
+          "activity": "available"
+        },
+        {
+          "time": "2008-02-19T07:29:45.394Z",
+          "activity": "break"
+        },
+        {
+          "time": "1982-07-10T17:52:20.878Z",
+          "activity": "break"
+        }
+      ]
+    },
+    {
+      "openDayId": "65e85c74062477ce17e89c57",
+      "firstname": "Alexander",
+      "lastname": "Schweda",
+      "shortform": "schwedaa",
+      "stations": [
+        {
+          "stationId": "65e85c74062477ce17e89c58",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c59",
+          "isLeader": "true"
+        },
+        {
+          "stationId": "65e85c74062477ce17e89c5a",
+          "isLeader": "true"
+        }
+      ],
+      "guideTeams": [
+        {
+          "teamId": "65e85c74062477ce17e89c5b",
+          "isLeader": "false"
+        },
+        {
+          "teamId": "65e85c74062477ce17e89c5c",
+          "isLeader": "false"
+        }
+      ],
+      "activity": [
+        {
+          "time": "1990-05-01T05:10:04.681Z",
+          "activity": "available"
+        },
+        {
+          "time": "2017-09-11T03:35:34.009Z",
+          "activity": "home"
+        },
+        {
+          "time": "2005-04-12T21:05:20.557Z",
+          "activity": "tour"
+        },
+        {
+          "time": "2000-03-08T06:11:42.101Z",
+          "activity": "home"
+        },
+        {
+          "time": "1994-10-28T05:03:37.511Z",
+          "activity": "home"
+        }
+      ]
+    }
+  ]
+  

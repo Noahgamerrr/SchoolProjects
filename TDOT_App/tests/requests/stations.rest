@@ -1,0 +1,57 @@
+@baseurl = http://127.0.0.1:8080/api
+
+### GET all stations 
+GET {{baseurl}}/stations
+
+
+
+### POST Entity
+# @name createEntityRequest
+POST {{baseurl}}/stations
+Content-Type: application/json
+
+{    
+  "name": 12,
+  "description": "2024-02-04",
+  "capacity": 6
+}
+
+#### var response
+@entityId = {{ createEntityRequest.response.body.$._id }}
+
+### GET entitiy by id
+GET {{baseurl}}/stations/{{entityId}}
+
+
+### UPDATE (PUT) 
+PUT {{baseurl}}/stations/{{entityId}}
+Content-Type: application/json
+If-Match: 0
+
+{    
+  "name": 12,
+  "description": "2024-02-04",
+  "capacity": 6   
+}
+
+### UPDATE (PATCH) 
+PATCH {{baseurl}}/entities/{{entityId}}
+Content-Type: application/merge-patch+json
+
+{
+  "xDate": "2024-03-05"
+}
+
+### 404 GET single 
+GET {{baseurl}}/entities/65cf0ba85e68154813ea20ef
+
+
+### 400 - POST Entity
+POST {{baseurl}}/entities
+Content-Type: application/json
+
+{    
+  "nr": 12,
+  "title45665": "Sample Title 12"  
+}
+

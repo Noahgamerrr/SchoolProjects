@@ -1,0 +1,9 @@
+# docker run --rm -it --entrypoint=/data/genDocu.sh -v '.:/data' ghcr.io/ingokofler/pandoc4all
+
+version: "3.7"
+services:
+    pandoc4all:
+        image: ghcr.io/ingokofler/pandoc4all
+        volumes:
+            - .:/data
+        entrypoint: /data/pandoc/genDocu.sh

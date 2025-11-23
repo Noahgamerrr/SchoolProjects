@@ -1,0 +1,9 @@
+@baseurl = http://127.0.0.1:8080/api
+
+GET {{baseurl}}/students/arsicn/teamMembers HTTP/1.1
+
+###
+GET {{baseurl}}/students?guideTeams.teamId=6717fa094214bc6d27de03bc HTTP/1.1
+
+### GET all students of guide team
+GET {{baseurl}}/guide-teams/6717fa094214bc6d27de03bc/members

@@ -1,0 +1,60 @@
+/*Sets width to max content*/
+.syp-max-content {
+    width: max-content;
+}
+
+/* Sets width of all child elements to 6rem */
+.syp-w-c-6 > * {
+    width: 6rem;
+}
+
+/* Sets horizontal margin of all child elements to 0.25rem */
+.syp-mx-c-1 > * {
+    margin: 0 0.25rem;
+}
+
+.syp-hover-grey:hover {
+    background-color: grey;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+/*Sets table-column width to fit the content*/
+.table td.fit, 
+.table th.fit {
+   white-space: nowrap;
+   width: 1%;
+}
+
+/* fix for hard to see controls on bootstrap carousel */
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+[data-bs-theme="dark"] .carousel .carousel-control-next-icon,
+[data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
+[data-bs-theme="dark"].carousel .carousel-control-next-icon,
+[data-bs-theme="dark"].carousel .carousel-control-prev-icon {
+    filter: none !important;
+}
+
+@media screen and (min-width: 768px) {
+    /*width 80% for screens that are at leas 768px wide*/
+    .syp-w-md-80 {
+        width: 80%;
+    }
+}
+  
+@media print {
+    @page {
+        size: 210mm 148mm;
+    }
+
+    .page-break {
+        margin-top: 148mm;
+        display: block;
+        page-break-before: auto;
+    }
+}
+

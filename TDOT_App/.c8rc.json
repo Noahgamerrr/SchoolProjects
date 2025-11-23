@@ -1,0 +1,14 @@
+{
+    "all": true,
+    "exclude": [
+        "client/**",
+        "auth/*",
+        "middlewares/*",
+        "db/*",
+        "logging/log.js",
+        "tests/*",
+        "notification-providers/*",
+        "coverage/*",
+        "eslint.config.js"
+    ]
+}

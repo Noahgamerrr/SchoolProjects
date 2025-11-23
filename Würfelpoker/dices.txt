@@ -1,0 +1,18 @@
+Setups and cards
+
+
+Base Cards:
+- Add 1 Dice
+- Burn 1 Dice 
+- Weighed Dice    / / Reroll one dice with a increased chance for a specific result.
+- Double Down     / / Gain the chance to reroll your own dices again.
+- Chicken Out     / / You will not gain or lose tokens this round
+- Reveal          / / Reveal 2 Cards
+
+Philosophy Cards:
+
+Cycle 1 -> 2
+2x Manipulate     / / Set a dice to a specific number
+
+Cycle 2 -> 3
+2x All Seeing Eye / / Reveal ALL dices

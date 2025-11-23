@@ -1,0 +1,4 @@
+{
+  "PORT": 8080,
+  "MONGODB_CONNECTION_STRING": "mongodb://127.0.0.1/openhouse-team-a"
+}

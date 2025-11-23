@@ -1,0 +1,72 @@
+[
+  {
+    "nr": 1,
+    "title": "Sample Title 1",
+    "xDate": "2024-02-04",
+    "category": "cat1",
+    "switch": true
+  },
+  {
+    "nr": 2,
+    "title": "Sample Title 2",
+    "xDate": "2024-02-03",
+    "category": "cat2",
+    "switch": false
+  },
+  {
+    "nr": 3,
+    "title": "Sample Title 3",
+    "xDate": "2024-02-02",
+    "category": "cat3",
+    "switch": true
+  },
+  {
+    "nr": 4,
+    "title": "Sample Title 4",
+    "xDate": "2024-02-01",
+    "category": "cat1",
+    "switch": false
+  },
+  {
+    "nr": 5,
+    "title": "Sample Title 5",
+    "xDate": "2024-01-31",
+    "category": "cat2",
+    "switch": true
+  },
+  {
+    "nr": 6,
+    "title": "Sample Title 6",
+    "xDate": "2024-01-30",
+    "category": "cat3",
+    "switch": false
+  },
+  {
+    "nr": 7,
+    "title": "Sample Title 7",
+    "xDate": "2024-01-29",
+    "category": "cat1",
+    "switch": true
+  },
+  {
+    "nr": 8,
+    "title": "Sample Title 8",
+    "xDate": "2024-01-28",
+    "category": "cat2",
+    "switch": false
+  },
+  {
+    "nr": 9,
+    "title": "Sample Title 9",
+    "xDate": "2024-01-27",
+    "category": "cat3",
+    "switch": true
+  },
+  {
+    "nr": 10,
+    "title": "Sample Title 10",
+    "xDate": "2024-01-26",
+    "category": "cat1",
+    "switch": false
+  }
+]

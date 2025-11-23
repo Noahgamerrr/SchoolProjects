@@ -1,0 +1,14 @@
+[  
+  '{{repeat(200)}}',
+  {
+"openDayId":"6617fa094214bc6d27de03ae",
+    "firstname":"{{firstName()}}",
+    "lastname":"{{surname()}}",
+    "stations":[],
+    "guideTeams":[],
+    "activity":[
+      '{{repeat(1, 20)}}',
+      {"time":"2024-01-01T{{integer(13,19)}}:{{integer(0,5)}}{{integer(0,9)}}:{{integer(0,5)}}{{integer(0,9)}}.000Z","activity":"{{random('home','break','break','available','available','tour','tour','tour','tour')}}"}
+    ]
+  }
+]

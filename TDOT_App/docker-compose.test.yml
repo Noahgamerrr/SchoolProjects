@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  mongo-test-container:
+    # docker run -p 50000:27017 -d --rm --name mongo-test-container mongo
+    image: mongo
+    ports:
+      - '50000:27017'

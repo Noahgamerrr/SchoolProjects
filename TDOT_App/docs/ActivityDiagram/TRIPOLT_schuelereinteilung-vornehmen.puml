@@ -1,0 +1,47 @@
+@startuml schuelereinteilung vornehmen
+!theme mars
+
+title Schülereinteilung vornehmen
+start
+:Select Student;
+:Select Assignment Type;
+if (Check Assignment Type) then (Station)
+    :Select Station from List;
+    if (Is only Station Member) then (Yes)
+        :Assign as station leader;
+    else (No)
+    endif
+else (Guide Team)
+    :Set Team Name;
+    if (Team Exists) then (No) 
+        :Prompt team creation;
+        if (Confirmed) then (No)
+            :Display Error Message;
+            stop
+        else (Yes)
+            :Create Team;
+            :Assign Student as Team Leader;
+        endif
+    else (Yes)
+    endif
+endif
+:Begin Team / Station Capacity Check;
+if (Team / Station has Space) then (Yes)
+    :Confirm Assignment;
+    if (Confirmed?) then (Yes)
+        :Remove from old team / station;
+        if (Old team is empty) then (Yes)
+            :Delete old team;
+        else (No)
+        endif
+            :Assign to new team / station;
+        stop
+    else (No)
+    endif
+    stop
+else (No)
+    :Display Error Message;
+    stop
+endif 
+
+@enduml

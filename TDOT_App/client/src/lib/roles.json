@@ -1,0 +1,11 @@
+{
+    "ADMIN": "admin",
+    "WORKER": "worker",
+    "APPOWNER": "appowner",
+    "GUIDE": "guide",
+    "PUPIL": "pupil",
+    "STATIONWORKER": "stationworker",
+    "TEACHER": "teacher",
+    "TEAMLEAD": "teamlead",
+    "TRUSTED_STUDENT": "trusted"
+}

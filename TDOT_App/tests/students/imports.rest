@@ -1,0 +1,12 @@
+### test unauthorized; expected: 403; with token : 200
+POST http://localhost:8080/api/import/students
+content-type: application/json
+
+{
+
+}
+
+
+### test invalid content type; expected: 410
+POST http://localhost:8080/api/import/students
+content-type: application/octet

@@ -1,0 +1,68 @@
+[
+    {
+        "code": 202016,
+        "title": "BG & BRG Villach Perau",
+        "address": {
+            "zipCode": 9500,
+            "city": "Villach",
+            "street": "Peraustraße 10"
+        },
+        "category": "AHS"
+    },
+    {
+        "code": 202026,
+        "title": "BG & BRG Villach St. Martin",
+        "address": {
+            "zipCode": 9500,
+            "city": "Villach",
+            "street": "Sankt Martiner Straße 7"
+        },
+        "category": "AHS"
+    },
+    {
+        "code": 100001,
+        "title": "Invalid Category",
+        "address": {
+            "zipCode": 9500,
+            "city": "Villach"
+        },
+        "category": "XHS"
+    },
+    {
+        "code": 100001,
+        "title": "Invalid Adress",
+        "address": {
+            "zipCode": 9500
+        },
+        "category": "AHS"
+    },    
+    {
+        "code": 202417,
+        "title": "HTL Villach",
+        "address": {
+            "zipCode": 9500,
+            "city": "Villach",
+            "street": "Tschinowitscherweg 5"
+        },
+        "category": "BHS"
+    },
+    {
+        "code": 207122,
+        "title": "MS Gegendtal-Treffen",
+        "address": {
+            "zipCode": 9521,
+            "city": "Treffen am Ossiacher See",
+            "street": "Gerlitzenstraße 26"
+        },
+        "category": "MS"
+    },
+    {
+        "code": 1000011,
+        "title": "Invalid Code",
+        "address": {
+            "zipCode": 9500,
+            "city": "Villach"
+        },
+        "category": "MS"
+    }    
+]

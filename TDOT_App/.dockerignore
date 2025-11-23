@@ -1,0 +1,16 @@
+# dependencies are installed by docker
+**/node_modules
+
+Dockerfile
+
+# Test files
+tests
+coverage
+requests
+
+# Config files
+.*
+
+# Documentation
+docs
+**/*.md

@@ -1,0 +1,19 @@
+---
+title: "Pflichtenheft - TeamA"
+author:
+    [
+        "Tobias Kendlbacher",
+        "Noah Arsić",
+        "Matthias Tripolt",
+        "Alexander Schweda",
+        "Julian Reissner",
+    ]
+titlepage: "true"
+code-block-font-size: '\small'
+toc-own-page: true
+listings-no-page-break: false
+footer-left: "SYP 2023/24"
+lang: "de-AT"
+colorlinks: true
+---
+

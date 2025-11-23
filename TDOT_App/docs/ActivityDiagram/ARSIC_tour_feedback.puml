@@ -1,0 +1,48 @@
+@startuml feedback
+|Visitor|
+start
+repeat
+:visit station;
+|Guide|
+:ask for station feedback;
+|Visitor|
+fork
+  if (star rating?) then (no)
+  else (yes)
+    :give star-rating to station;
+  endif
+fork again
+  if (comment?) then (no)
+  else (yes)
+    :give comment on station;
+  endif
+end fork
+|Guide|
+:save visitor's rating;
+|Visitor|
+repeat while (is tour ended?) is (no) not (yes)
+|Guide|
+:ask for tour feedback;
+|Visitor|
+fork
+if (star rating?) then (no)
+else (yes)
+  :gives star-rating to tour;
+endif
+fork again
+if (comment?) then (no)
+else (yes)
+  :gives comment on tour;
+endif
+fork again
+if (tour was ended prematurely) then (yes)
+  |Guide|
+  :ask for reason;
+  |Visitor|
+  :give reason for departure;
+endif
+end fork
+|Guide|
+:save visitor's rating;
+stop;
+@enduml

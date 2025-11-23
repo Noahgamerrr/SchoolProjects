@@ -1,0 +1,198 @@
+include:
+    - template: Security/SAST.gitlab-ci.yml
+    - template: Security/Dependency-Scanning.gitlab-ci.yml
+    - template: Security/Container-Scanning.gitlab-ci.yml
+
+stages:
+    - analyze
+    - test
+    - build
+    - release
+    - deploy
+
+analyzeBackend:
+    image: node:lts
+    stage: analyze
+    script:
+        - npm ci
+        - npm run lint
+    artifacts:
+        when: always
+        reports:
+            codequality: gl-codequality.json
+
+variables:
+    TAG_LATEST: "$CI_REGISTRY_IMAGE:latest"
+    TAG_COMMIT: "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+    CS_IMAGE: "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+    K8S_NAMESPACE: 5b-team-a-${CI_PIPELINE_ID}
+    APP_IMAGE_NAME: ${ACR_REGISTRY}:${CI_COMMIT_REF_SLUG}
+    DEPLOYMENT_URL: ${CI_PIPELINE_ID}.${DEPLOYMENT_DOMAIN}
+
+.k8Setup: &k8sSetup
+    - echo install
+    - echo "${K8S_CLIENT_KEY}" | base64 -d >client-key-data.pem
+    - echo "${K8S_CA}" | base64 -d >certificate-authority-data.pem
+    - echo "${K8S_CLIENT_CERT}" | base64 -d >client-certificate-data.pem
+    - kubectl config set-cluster k8s-aks-cluster --embed-certs=true --server=${K8S_SERVER} --certificate-authority=certificate-authority-data.pem
+    - kubectl config set-credentials k8s-aks-user --embed-certs=true --client-certificate=client-certificate-data.pem --client-key=client-key-data.pem --token=${K8S_TOKEN}
+
+    - kubectl config set-context k8s-aks --cluster=k8s-aks-cluster --user=k8s-aks-user
+    - kubectl config use-context k8s-aks
+
+npm-test-ci:
+    image: node:latest
+    stage: test
+    variables:
+        MONGODB_CONNECTION_STRING: "mongodb://mongo:27017/test"
+        AUTHJWT_VERIFY: "false"
+        DANGEROUS_DEV_BYPASS_AUTH: "true"
+        MONGODB_RECREATE: "true"
+    services:
+        - name: mongo:latest
+          alias: mongo
+    script:
+        - npm ci
+        - npm run test-ci
+    coverage: '/^Lines\s*:\s*([^%]+)/'
+    artifacts:
+        when: always
+        reports:
+            junit: test-results.xml
+            coverage_report:
+                coverage_format: cobertura
+                path: coverage/cobertura-coverage.xml
+
+build-image:
+    image: docker:latest
+    stage: build
+    needs: []
+    services:
+        - docker:dind
+    script:
+        - echo "$ACR_PWD" | docker login $ACR_NAME -u $ACR_USER
+          --password-stdin
+        - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER
+          --password-stdin
+        - docker build -t $TAG_COMMIT .
+        - docker tag $TAG_COMMIT $ACR_REGISTRY:$CI_COMMIT_REF_SLUG
+        - docker push $TAG_COMMIT
+        - docker push $ACR_REGISTRY:$CI_COMMIT_REF_SLUG
+
+release-image:
+    image: docker:latest
+    stage: release
+    services:
+        - docker:dind
+    script:
+        - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER
+          --password-stdin
+        - docker pull $TAG_COMMIT
+        - docker tag $TAG_COMMIT $TAG_LATEST
+        - docker push $TAG_LATEST
+    only:
+        - main
+
+release-acr:
+    image: docker:latest
+    stage: release
+    services:
+        - docker:dind
+    script:
+        - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER
+          --password-stdin
+        - echo "$ACR_PWD" | docker login $ACR_NAME -u $ACR_USER
+          --password-stdin
+        - docker pull $TAG_COMMIT
+        - docker tag $TAG_COMMIT $ACR_REGISTRY:latest
+        - docker tag $TAG_COMMIT $ACR_REGISTRY:main
+        - docker push $ACR_REGISTRY:latest
+        - docker push $ACR_REGISTRY:main
+    only:
+        - main
+
+# simplified deployment into AKS cluster
+deployApp:
+    stage: deploy
+    image: dtzar/helm-kubectl
+    needs:
+        - build-image
+        - npm-test-ci
+    script:
+        # get configuration by using macro
+        - *k8sSetup
+
+          # run kubectl command to check if cluster configuration is correct (otherwise this will fail)
+        - kubectl get nodes
+
+          # replace all occurrences in yml-files with values of environment variable (simple templating)
+        - cd k8s
+        - sed -i "s#<CI_PIPELINE_ID>#${CI_PIPELINE_ID}#g" gitlab-app-deployment.yml
+        - sed -i "s#<APP_IMAGE_NAME>#${APP_IMAGE_NAME}#g" gitlab-app-deployment.yml
+        - sed -i "s#<DEPLOYMENT_URL>#${DEPLOYMENT_URL}#g" gitlab-app-deployment.yml
+        - sed -i "s#<APP_IMAGE_NAME>#${APP_IMAGE_NAME}#g" gitlab-app-filldemodata.yml
+        - cat gitlab-app-deployment.yml
+        - cat gitlab-app-filldemodata.yml
+
+          # create namespace and apply to cluster
+        - kubectl create namespace ${K8S_NAMESPACE}
+        - kubectl config set-context --current --namespace=${K8S_NAMESPACE}
+
+          # create secret containing ACR credentials
+        - kubectl create secret docker-registry htldevzone-credentials --docker-server="${ACR_NAME}" --docker-username="${ACR_USER}" --docker-password="${ACR_PWD}"
+
+          # patch service account to use ACR credentials
+        - kubectl patch serviceaccount default -p "{\"imagePullSecrets\":[{\"name\":\"htldevzone-credentials\"}]}"
+
+        - kubectl apply -f gitlab-app-deployment.yml
+        - kubectl apply -f gitlab-app-filldemodata.yml
+
+    when: manual
+    dependencies: []
+    # this is the environment created - CI_COMMIT_REF_SLUG is resolved as branch name
+    # so potentially every feature branch has its own deployment for demonstration purposes
+    environment:
+        name: $CI_COMMIT_REF_SLUG
+        url: http://$DEPLOYMENT_URL
+        on_stop: undeployApp
+        auto_stop_in: 1 day
+
+# undeploy from cluster and cleanup the GitLab environment
+undeployApp:
+    stage: deploy
+    image: dtzar/helm-kubectl
+    needs:
+        - deployApp
+    script:
+        - *k8sSetup
+        - kubectl get nodes
+        - kubectl delete all,ingress --all -n ${K8S_NAMESPACE} --wait=true
+        - kubectl delete namespace ${K8S_NAMESPACE}
+    environment:
+        name: $CI_COMMIT_REF_SLUG
+        action: stop
+    when: manual
+    dependencies: []
+
+sast:
+    stage: test
+
+container_scanning:
+    allow_failure: false # Pipeline is forced to fail with custom logic
+    stage: build
+    variables:
+        SECURE_LOG_LEVEL: "debug"
+    needs: ["build-image"]
+    before_script:
+        - sudo apt-get update -y && sudo apt-get install -y jq
+    script:
+        - gtcs scan
+        - HIGH_SEVERITY_COUNT=$(jq '.vulnerabilities | map(select(.severity=="High")) | length' gl-container-scanning-report.json )
+        - CRIT_SEVERITY_COUNT=$(jq '.vulnerabilities | map(select(.severity=="Critical")) | length' gl-container-scanning-report.json )
+        - >
+            if [[ $HIGH_SEVERITY_COUNT -gt 0 || $CRIT_SEVERITY_COUNT -gt 0 ]]
+            then
+              echo "High or critical severity found"; exit 1 
+            else 
+              echo "No high or critical severity found" 
+            fi

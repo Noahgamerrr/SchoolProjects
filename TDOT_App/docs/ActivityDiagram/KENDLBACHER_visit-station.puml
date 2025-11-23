@@ -1,0 +1,40 @@
+@startuml visit-station
+
+start
+
+:A guide walks to a station with their visitor;
+if (The visitor is interested in the station) then (yes)
+    :The guide introduces the station;
+    if (At least one station worker is present) then (yes)
+        if (The station has capacity for more visitors) then (yes)
+            fork
+                :The visitor explores the station;
+                if (The visitor wants to ask questions) then (yes)
+                    :The station worker answers the questions;
+                else (no)
+                endif
+            fork again
+                :The guide checks the station into the tour;
+                :The guide prepares mentally for continuation of the tour;
+            end fork
+            :The guide checks out from the station;
+            :The guide and the visitor exit the station;
+            if (The visitor wants to give feeback) then (yes)
+                :The visitor gives feedback;
+            else (no)
+            endif
+            stop
+        else (no)
+            :The station is full;
+            stop
+        endif
+    else (no)
+        :An abandoned station is reported;
+        stop
+    endif
+else (no)
+    :The station was seen in the tour, but not properly visited;
+    stop
+endif
+
+@enduml

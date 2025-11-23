@@ -1,0 +1,32 @@
+@startuml import students data from current year
+|system|
+|admin|
+start
+repeat
+:initiate import of the current year's students;
+:remove absent students from list;
+|system|
+:fetch list of current students;
+while (non-imported students exist) is (<color:#c30>yes)
+:fetch next student from list;
+:check whether student\nhas already been imported;
+if (student already important) is (<color:#c30>yes) then
+:discard data point;
+:print error message;
+
+else (<color:#03c>no)
+:check validity of metadata;
+if (valid) is (<color:#c30>yes) then
+:copy student's data to system;
+else (<color:#03c>no)
+:print error message;
+endif;
+endif;
+endwhile (<color:#03c>no)
+|admin|
+:check for whether data is corrupted;
+backward:remove faulty student entries;
+repeat while (data) is (<color:red>corrupted)
+:commit changes to system;
+stop
+@enduml

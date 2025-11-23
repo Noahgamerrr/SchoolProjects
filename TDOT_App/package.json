@@ -1,0 +1,47 @@
+{
+    "name": "openhouse-team-a",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "test": "cross-env AUTHJWT_VERIFY=false DANGEROUS_DEV_BYPASS_AUTH=true MONGODB_RECREATE=true MONGODB_CONNECTION_STRING=mongodb://127.0.0.1:50000/openhouse-team-a-test c8 --reporter html --reporter text-summary mocha tests --recursive --timeout 10000 --exit",
+        "test-ci": "c8 --reporter cobertura --reporter text-summary mocha tests --recursive --timeout 10000 --exit --reporter mocha-junit-reporter",
+        "dev": "cross-env AUTHJWT_VERIFY=false LOG_LEVEL=debug nodemon --ignore ./client/ server.js",
+        "fill-demo-data": "node ./db/fill-demo-data.js",
+        "start": "cross-env AUTHJWT_VERIFY=true LOG_LEVEL=info node server.js",
+        "lint": "eslint --format gitlab",
+        "lint-fix": "eslint --format gitlab --fix"
+    },
+    "author": "KAA",
+    "license": "ISC",
+    "dependencies": {
+        "@godaddy/terminus": "^4.12.1",
+        "bson": "^6.10.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "isomorphic-dompurify": "^2.17.0",
+        "jsonwebtoken": "^9.0.2",
+        "jwks-rsa": "^3.1.0",
+        "mongoose": "^8.8.3",
+        "mongoose-unique-validator": "^5.0.1",
+        "multer": "1.4.5-lts.1",
+        "nodemailer": "^6.9.16",
+        "uuid": "^9.0.1",
+        "winston": "^3.17.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.16.0",
+        "c8": "^10.1.2",
+        "eslint": "^9.16.0",
+        "eslint-formatter-gitlab": "^5.1.0",
+        "globals": "^15.13.0",
+        "mocha": "^10.8.2",
+        "mocha-junit-reporter": "^2.2.1",
+        "nodemon": "^3.1.7",
+        "prettier": "^3.4.1",
+        "supertest": "^6.3.4"
+    },
+    "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+}

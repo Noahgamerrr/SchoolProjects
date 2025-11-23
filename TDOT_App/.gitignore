@@ -1,0 +1,9 @@
+node_modules
+*.pdf
+**/pnpm-lock.yaml
+.idea
+coverage/
+.vscode/
+.env
+/coverage
+/.nyc_output

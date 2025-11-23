@@ -1,0 +1,580 @@
+[
+    {
+        "_id": { "$oid": "6617fa094214bc6d27de03bc" },
+        "name": "Rennspiel Stand",
+        "description": "Ein einfaches Rennspiel. In Java Programmiert",
+        "capacity": 4,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "interactive",
+        "tags": ["Gaming", "Coding"],
+        "roomNr": "Halle 1",
+        "visitorsAtTime": [{
+            "name": "8:00",
+            "value": 3
+        },{
+            "name": "9:00",
+            "value": 2
+        },{
+            "name": "10:00",
+            "value": 3
+        },{
+            "name": "11:00",
+            "value": 3
+        }
+        ]
+    },
+    {
+        "_id": { "$oid": "6617fa094214bc5d23ce03bc" },
+        "name": "Infostand",
+        "description": "Informationen über den TDOT",
+        "capacity": 4,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "audio-visual",
+        "tags": ["Information"],
+        "roomNr": "Halle 1",
+        "visitorsAtTime":
+        [{
+            "name": "8:00",
+            "value": 3
+        },{
+            "name": "9:00",
+            "value": 1
+        },{
+            "name": "10:00",
+            "value": 0
+        },{
+            "name": "11:00",
+            "value": 2
+        }
+        ]    },
+    {
+        "_id": { "$oid": "6617fa094214ac5d29de03bc" },
+        "name": "Essensstand",
+        "description": "Hier wird essen verkauft.",
+        "capacity": 8,
+        "minWorkers": 2,
+        "interactType": "other",
+        "tags": ["Essen"],
+        "roomNr": "Halle 2",
+        "visitorsAtTime": [
+          { "name": "8:00", "value": 8 },
+          { "name": "9:00", "value": 5 },
+          { "name": "10:00", "value": 3 },
+          { "name": "11:00", "value": 3 },
+          { "name": "12:00", "value": 7 }
+        ]
+    },
+    {
+        "_id": { "$oid": "6617fa094214ac5d28de03bc" },
+        "name": "Schachspiel",
+        "description": "Ein einfaches Schachspiel, In Python programmiert.",
+        "capacity": 2,
+        "minWorkers": 1,
+        "maxWorkers": 2,
+        "interactType": "interactive",
+        "tags": ["Gaming", "Coding"],
+        "roomNr": "Halle 1",
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 1 },
+        { "name": "9:00", "value": 1 },
+        { "name": "10:00", "value": 2 },
+        { "name": "11:00", "value": 0},
+        { "name": "12:00", "value": 2 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac5d27de03bc" },
+        "name": "BWM-Stand",
+        "description": "Ein Stand für Betriebswirtschaft",
+        "capacity": 4,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "audio-visual",
+        "tags": ["BWM", "Info"],
+        "roomNr": "Halle 1",
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 1},
+        { "name": "9:00", "value": 1},
+        { "name": "10:00", "value": 1 },
+        { "name": "11:00", "value": 4},
+        { "name": "12:00", "value": 3},
+        { "name": "13:00", "value": 1 },
+        { "name": "14:00", "value": 1 },
+        { "name": "15:00", "value": 4},
+        { "name": "16:00", "value": 1 },
+        { "name": "17:00", "value": 1 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac5d26dc03bc" },
+        "name": "Webpage Design",
+        "description": "Eine webpage für den TDOT, erklärt webdesign",
+        "capacity": 4,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "audio-visual",
+        "tags": ["Webdesign", "Info"],
+        "roomNr": "Halle 2",
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 4 },
+        { "name": "9:00", "value": 2 },
+        { "name": "10:00", "value": 1 },
+        { "name": "11:00", "value": 0 },
+        { "name": "12:00", "value": 1 },
+        { "name": "13:00", "value": 0 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac4d25dc03bc" },
+        "name": "Programmierstand",
+        "description": "Einfache Java-Programmierübungen",
+        "capacity": 12,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "problem-solving",
+        "tags": ["Java", "Coding", "Challange"],
+        "roomNr": "421",
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 12 },
+        { "name": "9:00", "value": 3 },
+        { "name": "10:00", "value": 10 },
+        { "name": "11:00", "value": 7 },
+        { "name": "12:00", "value": 9 },
+        { "name": "13:00", "value": 5 },
+        { "name": "14:00", "value": 5 },
+        { "name": "15:00", "value": 9 },
+        { "name": "16:00", "value": 10 },
+        { "name": "17:00", "value": 10 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac4d24dc03bc" },
+        "name": "Smart-Home",
+        "description": "Ein kleines Smart-Home mit Smart-Devices",
+        "capacity": 4,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "visual",
+        "tags": ["Smart Homes", "Hardware"],
+        "roomNr": "Halle 1",
+      "visitorsAtTime": [
+        { "name": "17:00", "value": 2 },
+        { "name": "9:00", "value": 1 },
+        { "name": "12:00", "value": 4 },
+        { "name": "10:00", "value": 4 },
+        { "name": "11:00", "value": 0 },
+        { "name": "13:00", "value": 0 },
+        { "name": "14:00", "value": 4 },
+        { "name": "15:00", "value": 0 },
+        { "name": "16:00", "value": 0 },
+        { "name": "8:00", "value": 4 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d23dc03bc" },
+        "name": "Taktikspiel",
+        "description": "Ein in Unity entworfenes Taktikspiel",
+        "capacity": 2,
+        "minWorkers": 1,
+        "maxWorkers": 2,
+        "interactType": "interactive",
+        "tags": ["Gaming", "Coding"],
+        "roomNr": "Halle 1",
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 1 },
+        { "name": "9:00", "value": 1 },
+        { "name": "10:00", "value": 1 },
+        { "name": "11:00", "value": 0 },
+        { "name": "12:00", "value": 1 },
+        { "name": "13:00", "value": 1 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d22dc03bc" },
+        "name": "Media-Wall",
+        "description": "Eine Fernseherwand, die auf 9 Bildschirme verteilt ein video feed ausgibt.",
+        "capacity": 4,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "visual",
+        "tags": ["CABS", "Info"],
+        "roomNr": "Halle 1",
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 3 },
+        { "name": "9:00", "value": 3 },
+        { "name": "10:00", "value": 1 },
+        { "name": "11:00", "value": 4 },
+        { "name": "12:00", "value": 0 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03bc" },
+        "name": "NSCS-Stand",
+        "description": "Hier wird das Innenleben eines Computers erklärt",
+        "capacity": 1,
+        "minWorkers": 1,
+        "maxWorkers": 4,
+        "interactType": "audio-visual",
+        "tags": ["NSCS", "Info"],
+        "roomNr": "420",
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 0 },
+        { "name": "9:00", "value": 0 },
+        { "name": "10:00", "value": 1 },
+        { "name": "11:00", "value": 0 },
+        { "name": "12:00", "value": 0 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d24cc03bc" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Binary Byte",
+        "description": "A station where participants decode binary sequences to reveal hidden messages.",
+        "capacity": 15,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 8 },
+        { "name": "9:00", "value": 9 },
+        { "name": "10:00", "value": 7 },
+        { "name": "11:00", "value": 5 },
+        { "name": "12:00", "value": 7 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03bd" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Algorithm Alley",
+        "description": "Explore various sorting and searching algorithms through interactive puzzles.",
+        "capacity": 20,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 20 },
+        { "name": "9:00", "value": 11 },
+        { "name": "10:00", "value": 8 },
+        { "name": "11:00", "value": 6 },
+        { "name": "12:00", "value": 8 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03be" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Cybersecurity Citadel",
+        "description": "Learn about encryption, firewalls, and network security in this fortified station.",
+        "capacity": 25,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 11 },
+        { "name": "9:00", "value": 12 },
+        { "name": "10:00", "value": 9 },
+        { "name": "11:00", "value": 7 },
+        { "name": "12:00", "value": 9 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03bf" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "CodeCrafters Corner",
+        "description": "A creative space for coding challenges, hackathons, and collaborative projects.",
+        "capacity": 30,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 10 },
+        { "name": "9:00", "value": 11 },
+        { "name": "10:00", "value": 28 },
+        { "name": "11:00", "value": 26 },
+        { "name": "12:00", "value": 27 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c0" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Syntax Square",
+        "description": "Dive into programming languages—discuss syntax, compare paradigms, and write snippets.",
+        "capacity": 20,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 10 },
+        { "name": "9:00", "value": 12 },
+        { "name": "10:00", "value": 9 },
+        { "name": "11:00", "value": 6 },
+        { "name": "12:00", "value": 8 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c1" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Debugging Depot",
+        "description": "Troubleshoot buggy code snippets and learn effective debugging techniques.",
+        "capacity": 15,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 12 },
+        { "name": "9:00", "value": 13 },
+        { "name": "10:00", "value": 10 },
+        { "name": "11:00", "value": 7 },
+        { "name": "12:00", "value": 9 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c2" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Data Science Oasis",
+        "description": "Analyze datasets, build predictive models, and visualize insights.",
+        "capacity": 25,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 11 },
+        { "name": "9:00", "value": 12 },
+        { "name": "10:00", "value": 9 },
+        { "name": "11:00", "value": 6 },
+        { "name": "12:00", "value": 8 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c3" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Virtual Reality Vertex",
+        "description": "Experiment with VR development tools and create immersive experiences.",
+        "capacity": 20,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 12 },
+        { "name": "9:00", "value": 13 },
+        { "name": "10:00", "value": 10 },
+        { "name": "11:00", "value": 8 },
+        { "name": "12:00", "value": 10 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c4" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Quantum Quarters",
+        "description": "Explore quantum computing concepts, qubits, and quantum gates.",
+        "capacity": 10,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 10 },
+        { "name": "9:00", "value": 10 },
+        { "name": "10:00", "value": 9 },
+        { "name": "11:00", "value": 5 },
+        { "name": "12:00", "value": 7 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c5" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Machine Learning Meadow",
+        "description": "Train models, explore neural networks, and discuss ML applications.",
+        "capacity": 25,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 14 },
+        { "name": "9:00", "value": 15 },
+        { "name": "10:00", "value": 15 },
+        { "name": "11:00", "value": 9 },
+        { "name": "12:00", "value": 10 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c6" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "API Arcade",
+        "description": "Build RESTful APIs, explore endpoints, and integrate services.",
+        "capacity": 20,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 9 },
+        { "name": "9:00", "value": 15 },
+        { "name": "10:00", "value": 5 },
+        { "name": "11:00", "value": 0 },
+        { "name": "12:00", "value": 5 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c7" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Git Garden",
+        "description": "Learn version control with Git, branching, merging, and collaboration.",
+        "capacity": 15,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 12 },
+        { "name": "9:00", "value": 12 },
+        { "name": "10:00", "value": 10 },
+        { "name": "11:00", "value": 7 },
+        { "name": "12:00", "value": 9 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c8" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Web Dev Workshop",
+        "description": "Design web pages, experiment with HTML, CSS, and JavaScript.",
+        "capacity": 30,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 12 },
+        { "name": "9:00", "value": 12 },
+        { "name": "10:00", "value": 10 },
+        { "name": "11:00", "value": 7 },
+        { "name": "12:00", "value": 9 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03c9" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Database Domain",
+        "description": "Explore SQL, NoSQL, and graph databases. Design and query data structures.",
+        "capacity": 25,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 8 },
+        { "name": "9:00", "value": 9 },
+        { "name": "10:00", "value": 0 },
+        { "name": "11:00", "value": 0 },
+        { "name": "12:00", "value": 5 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03ca" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Artificial Intelligence Arena",
+        "description": "Delve into AI algorithms, natural language processing, and machine learning.",
+        "capacity": 20,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 11 },
+        { "name": "9:00", "value": 11 },
+        { "name": "10:00", "value": 9 },
+        { "name": "11:00", "value": 6 },
+        { "name": "12:00", "value": 8 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03cb" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Network Node",
+        "description": "Study networking protocols, configure routers, and troubleshoot connectivity issues.",
+        "capacity": 15,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 10 },
+        { "name": "9:00", "value": 12 },
+        { "name": "10:00", "value": 9 },
+        { "name": "11:00", "value": 7 },
+        { "name": "12:00", "value": 8 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03cc" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Cloud Computing Cloud",
+        "description": "Learn about cloud services, deploy applications, and manage virtual machines.",
+        "capacity": 25,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 13 },
+        { "name": "9:00", "value": 14 },
+        { "name": "10:00", "value": 15 },
+        { "name": "11:00", "value": 8 },
+        { "name": "12:00", "value": 9 }
+      ]
+
+    },
+    {
+        "_id": { "$oid": "6617fa094213ac3d21dc03cd" },
+        "roomNr": "Halle 3",
+        "tags": ["Filler", "Utility"],
+        "interactType": "audio-visual",
+        "maxWorkers": 4,
+        "minWorkers": 1,
+        "name": "Embedded Systems Enclave",
+        "description": "Design and program microcontrollers, sensors, and IoT devices.",
+        "capacity": 20,
+      "visitorsAtTime": [
+        { "name": "8:00", "value": 7 },
+        { "name": "9:00", "value": 8 },
+        { "name": "10:00", "value": 5 },
+        { "name": "11:00", "value": 0 },
+        { "name": "12:00", "value": 5 }
+      ]
+
+    }
+]

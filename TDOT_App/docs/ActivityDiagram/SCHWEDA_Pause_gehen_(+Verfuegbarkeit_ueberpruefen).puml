@@ -1,0 +1,43 @@
+@startuml Pause_gehen
+start
+:guide requests break;
+:team leader is notified;
+:response timer starts;
+if (team leader responds before the timer runs out) then (yes)
+else(no)
+    :guide is automatically allowed to take break;
+    :guide availability set to "on break";
+    stop
+endif
+:team leader evaluates guide's previous brakes;
+if (guide has had too many previous brakes) then (yes)
+    :team leader declines request;
+    :guide remains on "available";
+    stop
+else (no)
+    :team leader checks teammate availability;
+    if (other guide/s is/are on break) then (yes)
+        if (other guides have had sufficient break time) then (yes)
+            :request other guide/s to come back from break;
+            if (other guide comes back from brake) then (yes)
+                :guide is set to "on break";
+                :other guide/s can be set to "available';
+                stop
+            else (no)
+                :incident is noted;
+                :guide must remain "available";
+                stop
+            endif
+        else (no)
+            :guide is asked to wait for 
+            colleagues to come off break;
+            :guide remains "available";
+            stop
+        endif
+    else(no)
+        :request is accepted;
+        :guide's status is set to "on break";
+        stop
+    endif
+endif
+@enduml

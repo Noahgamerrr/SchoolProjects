@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+    name: app-fill-demo-data
+spec:
+    template:
+        spec:
+            containers:
+                - name: fill-demo-data
+                  image: <APP_IMAGE_NAME>
+                  imagePullPolicy: Always
+                  command: ["npm", "run", "fill-demo-data"]
+                  env:
+                      - name: MONGODB_CONNECTION_STRING
+                        value: "mongodb://mongo-service/db"
+            restartPolicy: Never
+    backoffLimit: 4

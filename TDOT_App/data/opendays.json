@@ -1,0 +1,32 @@
+[
+    {
+        "_id": {
+            "$oid": "6617fa094214bc6d27de03ae"
+        },
+        "date": "2024-04-24",
+        "active": true,
+        "stationOrdering": [{ 
+            "id": "6617fa094213ac4d24dc03bc",
+            "order": 1
+        }, { 
+            "id": "6617fa094214bc6d27de03bc",
+            "order": 2
+        }, { 
+            "id": "6617fa094213ac3d21dc03c1",
+            "order": 2
+        }, { 
+            "id": "6617fa094213ac3d21dc03be",
+            "order": 3
+        }, { 
+            "id": "6617fa094214ac5d28de03bc",
+            "order": 4
+        }]
+    },
+    {
+        "_id": {
+            "$oid": "6617fa094214bc6d27de03ad"
+        },
+        "date": "2025-02-14",
+        "active": false
+    }
+]

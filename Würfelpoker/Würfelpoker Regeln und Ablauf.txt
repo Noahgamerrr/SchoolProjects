@@ -1,0 +1,24 @@
+Würfelpoker: Link: https://www.gamedesign.de/wuerfelpoker
+
+Spielziel: Gewonnen hat jener Spieler, welcher die höchste Pokerkombinationen würfelt und somit die meisten Chips besitzt.
+Spielvorbereitung: Jeder Spieler erhält 5 Chips
+
+Reihenfolge:
+
+1. Fünfling: 5 Würfel mit derselben Augenzahl (auch Poker genannt). Haben mehrere Spieler einen Fünfling, so gewinnt der mit der höchsten Augenzahl.
+2. Vierling: 4 Würfel mit derselben Augenzahl. Haben mehrere Spieler einen Vierling, so gewinnt der mit der höchsten Augenzahl.
+3. Full House: Ein Drilling und ein Paar. Haben mehrere Spieler ein Full House, so gewinnt der mit der höchsten Augenzahl.
+4. Strasse: 5 Würfel in aufsteigender Reihenfolge, z. B. 1,2,3,4,5. Eine Strasse von 2 bis 6 zählt mehr als 1 bis 5.
+5. Drilling: 3 Würfel mit derselben Augenzahl. Haben mehrere Spieler einen Drilling, so gewinnt der mit der höchsten Augenzahl.
+6. Zwei Paare: Zweimal 2 Würfel mit derselben Augenzahl. Haben mehrere Spieler zwei Paare, so gewinnt der mit der höchsten Augenzahl.
+7. Ein Paar: 2 Würfel mit derselben Augenzahl. Haben mehrere Spieler ein Paar, so gewinnt der mit der höchsten Augenzahl.
+
+
+Ablauf:
+Einsatz pro Spieler 1 Chip. Jeder Spieler hat 2 Würfe, nach dem ersten Wurf kann man mit höchstens 
+3 Würfel weiterwürfeln. Die höchste Kombination gewinnt und bekommt die eingesetzten Chips.
+
+Ende: Wenn einer der Spieler keine Chips mehr jat, gewonnen hat jener mit den meisten Chips.
+
+
+

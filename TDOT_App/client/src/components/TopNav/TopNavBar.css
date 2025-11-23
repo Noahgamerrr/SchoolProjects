@@ -1,0 +1,20 @@
+.navbar-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 5%;
+}
+
+.btn-htl {
+  background-color: #FFE65D !important; /* HTL-Logo-Yellow */
+  color: black !important;  
+  border-color: black !important;
+}
+
+#topNav a {
+  text-decoration: none; 
+}
+
+.custom-dropdown-toggle .dropdown-toggle::after {
+  color: white; /* Changes caret color */
+  border-top-color: white !important; /* Ensures caret's border matches the color */
+}

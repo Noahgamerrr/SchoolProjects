@@ -1,0 +1,8 @@
+.custom-scroll {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 0; /* Hide scrollbar for Chrome/Safari */
+}
